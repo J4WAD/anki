@@ -364,11 +364,11 @@ class DeckBrowser:
             parent=self.mw, deck_ids=[did], deck_name=deck_name
         ).run_in_background()
 
-    # Top buttons
+    # Top buttons jawad
     ######################################################################
 
     drawLinks = [
-        ["", "shared", tr.decks_get_shared()],
+        #["", "shared", tr.decks_get_shared()],
         ["", "create", tr.decks_create_deck()],
         ["Ctrl+Shift+I", "import", tr.decks_import_file()],
     ]
