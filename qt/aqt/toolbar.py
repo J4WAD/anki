@@ -380,7 +380,7 @@ class Toolbar:
     def _process_tray_content(self, content: list[str]) -> str:
         return "\n".join(f"""<div class="tray-item">{item}</div>""" for item in content)
 
-    # Sync jawad j4wad
+    # Sync jawad
     ######################################################################
 
     def _create_sync_link(self) -> str:
@@ -388,8 +388,11 @@ class Toolbar:
         title = tr.actions_shortcut_key(val="Y")
         label = "sync"
         self.link_handlers[label] = self._syncLinkHandler
-
         return f""""""
+        #return f"""
+#<a class=hitem tabindex="-1" aria-label="{name}" title="{title}" id="{label}" href=# onclick="return pycmd('{label}')"
+#>{name}<img id=sync-spinner src='/_anki/imgs/refresh.svg'>
+#</a>"""
 
     def set_sync_active(self, active: bool) -> None:
         method = "add" if active else "remove"
