@@ -303,7 +303,7 @@ class DeckBrowser:
     def _topLevelDragRow(self) -> str:
         return "<tr class='top-level-drag-row'><td colspan='6'>&nbsp;</td></tr>"
 
-    # Options
+    # Options jawad
     ##########################################################################
 
     def _showOptions(self, did: str) -> None:
@@ -311,8 +311,8 @@ class DeckBrowser:
         a = m.addAction(tr.actions_rename())
         qconnect(a.triggered, lambda b, did=did: self._rename(DeckId(int(did))))
         a = m.addAction(tr.actions_options())
-        qconnect(a.triggered, lambda b, did=did: self._options(DeckId(int(did))))
-        a = m.addAction(tr.actions_export())
+        #qconnect(a.triggered, lambda b, did=did: self._options(DeckId(int(did))))
+        #a = m.addAction(tr.actions_export())
         qconnect(a.triggered, lambda b, did=did: self._export(DeckId(int(did))))
         a = m.addAction(tr.actions_delete())
         qconnect(a.triggered, lambda b, did=did: self._delete(DeckId(int(did))))
